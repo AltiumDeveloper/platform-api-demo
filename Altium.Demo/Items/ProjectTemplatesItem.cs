@@ -1,0 +1,36 @@
+﻿using MudBlazor;
+using Altium.Client;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Altium.Demo;
+
+public sealed class ProjectTemplatesItem(WorkspaceConfigurationItem parent) : LeafTreeItem(parent)
+{
+    public IReadOnlyList<IMyProjectTemplate>? Templates { get; private set; }
+    public override string Text => "Project Templates";
+    public override string Icon => Icons.Material.Filled.CopyAll;
+    public new WorkspaceConfigurationItem Parent => (WorkspaceConfigurationItem)base.Parent;
+
+    public override string SetCurrent()
+    {
+        if (Current != this)
+        {
+            Current = this;
+            Update(() => OnChange?.Invoke());
+        }
+        return "ProjectTemplates";
+    }
+
+    public static event Action? OnChange;
+    public static ProjectTemplatesItem? Current { get; private set; }
+
+    protected override async Task UpdateAsync()
+    {
+        var res = await Client.ProjectTemplates.ExecuteAsync(Parent.Parent.Tag.Url);
+        var data = res.AssertNoErrors();
+
+        Templates = data.DesWorkspaceConfiguration.ProjectTemplates?.Nodes;
+    }
+}

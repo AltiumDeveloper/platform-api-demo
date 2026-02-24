@@ -1,0 +1,11 @@
+{
+  "schema": "schema.graphql",
+  "documents": "**/*.graphql",
+  "extensions": {
+    "strawberryShake": {
+      "name": "AltiumClient",
+      "namespace": "Altium.Client",
+      "url": "https://eur.365.altium.com/napi/gateway/graphql"
+    }
+  }
+}

@@ -1,24 +1,18 @@
-# Nexar.Design Demo
+# Altium 365 API Demo
 
-[nexar.com]: https://nexar.com/
-[nexar-token-cs]: https://github.com/NexarDeveloper/nexar-token-cs
-[nexar-token-py]: https://github.com/NexarDeveloper/nexar-token-py
 
-Blazor WebAssembly with design queries powered by Nexar.
+A365 workspace queries powered by Altium 365 API.
 
-Live demo: <https://web-design-demo.nexar.com>
+Live demo: <TBD>
 
 ## How to use
 
-If you have not done this, please register at [nexar.com] and create your Nexar
-application with the Design domain enabled.
+If you have not done this, please enroll at Altium Developer Center.
 
 In order to see anything useful, you also need your Altium Live credentials and
 have to be a member of at least one Altium 365 workspace.
 
-The demo requires an access token. Go to [nexar.com] application details, click
-"Generate token". Alternatively, you may get a token using one of the tools:
-[nexar-token-cs], [nexar-token-py].
+The demo requires an access token. Go to Altium Developer Center application details.
 
 Having got a token, copy it to the clipboard and open the app in a browser.
 Paste the token at the `Connect` page and click `CONNECT`. The browser keeps
@@ -27,7 +21,7 @@ and restores the token on next runs. The token may be used until it expires.
 ## Features
 
 - Altium 365 hierarchical data tree with some notable branches.
-- Example of using various Nexar queries in .NET applications.
+- Example of using various Altium 365 API queries in .NET applications.
 - Example of using workspace region specific endpoints.
 
 Data tree structure:
@@ -77,11 +71,11 @@ https://web-design-demo.nexar.com?api=...&token=...&workspace=...
 
 - `api`
 
-    The Nexar GraphQL API endpoint, <https://api.nexar.com/graphql>
+    The Altium 365 API GraphQL endpoint, <https://eur.365.altium.com/napi/gateway/graphql>
 
 - `token`
 
-    The Nexar access token to use and skip the connect page.
+    The Altium access token to use and skip the connect page.
 
 - `workspace`
 
@@ -95,16 +89,16 @@ https://web-design-demo.nexar.com?api=...&token=...&workspace=...
 
 The app is built with [Blazor] using [MudBlazor] components.
 
-The Design domain data are provided by Nexar API: <https://api.nexar.com/graphql>.
+The Design domain data are provided by Altium 365 API: <https://eur.365.altium.com/napi/gateway/graphql>.
 This is the endpoint for GraphQL queries and also the GraphQL IDE "Banana Cake Pop".
 
 The package [HotChocolate StrawberryShake](https://github.com/ChilliCream/hotchocolate)
 is used for generating strongly typed C# client code for invoking GraphQL queries.
-See the source queries in [Resources](Nexar.Client/Resources).
+See the source queries in [Resources](Altium.Client/Resources).
 
 ## How to update GraphQL schema
 
-Change to `Nexar.Client` and run:
+Change to `Altium.Client` and run:
 
 ```
 dotnet tool restore

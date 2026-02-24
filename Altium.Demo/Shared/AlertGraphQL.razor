@@ -1,0 +1,13 @@
+﻿
+<MudAlert Severity="Severity.Info">
+    GraphQL
+    @foreach(var file in Files.Split(' ', StringSplitOptions.RemoveEmptyEntries))
+    {
+        <MudText><MudLink Href=@("https://github.com/AltiumDeveloper/platform-api-demo/blob/main/Altium.Client/Resources/" + file) Target="_black">@file</MudLink></MudText>
+    }
+</MudAlert>
+
+@code {
+    [Parameter]
+    public string Files { get; init; } = null!;
+}
