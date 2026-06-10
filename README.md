@@ -1,18 +1,17 @@
 # Altium 365 API Demo
 
 
-A365 workspace queries powered by Altium 365 API.
+Altium 365 workspace queries powered by Altium 365 API.
 
-Live demo: <TBD>
+Live demo: https://a365-api-demo.intdev.altium.com/
 
 ## How to use
 
-If you have not done this, please enroll at Altium Developer Center.
+If you have not done this, please enrol at [Altium Developer Center](https://developer.altium.com/).
+In order to see anything useful, you also need to be a member of at least one Altium 365 workspace.
 
-In order to see anything useful, you also need your Altium Live credentials and
-have to be a member of at least one Altium 365 workspace.
-
-The demo requires an access token. Go to Altium Developer Center application details.
+Plesae see [Altium 365 API Quick Start Guide](https://www.altium.com/documentation/altium-developer-center/quick-starts/365-api)
+for details on retrieving Altium 365 API access token.
 
 Having got a token, copy it to the clipboard and open the app in a browser.
 Paste the token at the `Connect` page and click `CONNECT`. The browser keeps
@@ -22,7 +21,7 @@ and restores the token on next runs. The token may be used until it expires.
 
 - Altium 365 hierarchical data tree with some notable branches.
 - Example of using various Altium 365 API queries in .NET applications.
-- Example of using workspace region specific endpoints.
+- Example of using workspace region-specific endpoints.
 
 Data tree structure:
 
@@ -66,7 +65,7 @@ Data tree structure:
 The application may be started with the following parameters:
 
 ```
-https://web-design-demo.nexar.com?api=...&token=...&workspace=...
+https://a365-api-demo.intdev.altium.com?api=...&token=...&workspace=...
 ```
 
 - `api`
