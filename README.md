@@ -1,7 +1,7 @@
 # Altium 365 API Demo
 
 
-Altium 365 workspace queries powered by Altium 365 API.
+Altium 365 workspace queries powered by [Altium 365 API](https://www.altium.com/documentation/altium-developer-center/altium-365/api).
 
 Live demo: https://a365-api-demo.intdev.altium.com/
 
@@ -70,7 +70,7 @@ https://a365-api-demo.intdev.altium.com?api=...&token=...&workspace=...
 
 - `api`
 
-    The Altium 365 API GraphQL endpoint, <https://eur.365.altium.com/napi/gateway/graphql>
+    The Altium 365 API GraphQL endpoint
 
 - `token`
 
@@ -85,11 +85,11 @@ https://a365-api-demo.intdev.altium.com?api=...&token=...&workspace=...
 
 [Blazor]: https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor
 [MudBlazor]: https://github.com/Garderoben/MudBlazor
+[Altium 365 API]: https://www.altium.com/documentation/altium-developer-center/altium-365/api
 
 The app is built with [Blazor] using [MudBlazor] components.
 
-The Design domain data are provided by Altium 365 API: <https://eur.365.altium.com/napi/gateway/graphql>.
-This is the endpoint for GraphQL queries and also the GraphQL IDE "Banana Cake Pop".
+The Design domain data are provided by [Altium 365 API].
 
 The package [HotChocolate StrawberryShake](https://github.com/ChilliCream/hotchocolate)
 is used for generating strongly typed C# client code for invoking GraphQL queries.
