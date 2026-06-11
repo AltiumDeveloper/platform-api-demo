@@ -10,7 +10,7 @@ Live demo: https://a365-api-demo.intdev.altium.com/
 If you have not done this, please enrol at [Altium Developer Center](https://developer.altium.com/).
 In order to see anything useful, you also need to be a member of at least one Altium 365 workspace.
 
-Plesae see [Altium 365 API Quick Start Guide](https://www.altium.com/documentation/altium-developer-center/quick-starts/365-api)
+Please see [Altium 365 API Quick Start Guide](https://www.altium.com/documentation/altium-developer-center/quick-starts/365-api)
 for details on retrieving Altium 365 API access token.
 
 Having got a token, copy it to the clipboard and open the app in a browser.
